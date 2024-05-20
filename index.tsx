@@ -1,14 +1,20 @@
 import React, { useMemo } from 'react'
 import { Polygon, PolygonProps, Svg, SvgProps } from 'react-native-svg'
 interface Props {
-    // hexagon diameter
+    /**
+     * hexagon diameter
+     */
     width: number
     stroke?: PolygonProps['stroke'],
     strokeWidth?: PolygonProps['strokeWidth'],
     fill?: PolygonProps['fill'],
-    //PROP of SVG tags (additional)
+    /**
+     * PROP of SVG tags (additional) 
+     */
     svgProps?: SvgProps
-    //PROP of PolygonProps tag (additional)
+    /**
+     * PROP of PolygonProps tag (additional)
+     */
     polygonProps?: PolygonProps
 }
 export default function Hexagon({ width = 100, stroke = "black", strokeWidth = "2", fill = "lightblue", ...props }: Props) {
