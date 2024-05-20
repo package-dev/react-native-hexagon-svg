@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Polygon, Svg } from 'react-native-svg'
-
 export default function Hexagon({ width = 100, stroke = "black", strokeWidth = "2", fill = "lightblue" }) {
     const diameter = width
     const radius = (diameter / 2)
@@ -17,7 +16,6 @@ export default function Hexagon({ width = 100, stroke = "black", strokeWidth = "
         { x: radius, y: 0 },
     ]
     const points = hexagonPoints.map(point => `${point.x},${point.y}`).join(' ');
-    console.debug('points', points)
     return (
         <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1 }}>
             <Svg height={diameter} width={width}>
